@@ -1,7 +1,6 @@
 package week3;
 
-package edu.princeton.cs.algs4;
-import edu.princeton.cs.algs4.StdIn;
+import edu.princeton.cs.algs4.*;
 import edu.princeton.cs.algs4.StdOut;
 import java.util.Arrays;
 

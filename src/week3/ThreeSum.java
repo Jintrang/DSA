@@ -1,7 +1,7 @@
 package week3;
-import edu.princeton.cs.algs4.StdIn;
+import edu.princeton.cs.algs4.*;
 import edu.princeton.cs.algs4.StdOut;
-//package edu.princeton.cs.algs4;
+import edu.princeton.cs.algs4.Stopwatch;
 public class ThreeSum {
     // Do not instantiate.
     private ThreeSum() { }
@@ -49,12 +49,12 @@ public class ThreeSum {
     }
 
     public static void main(String[] args)  {
-        //In in = new In(args[0]);
-        //int[] a = in.readAllInts();
+        In in = new In(args[0]);
+        int[] a = in.readAllInts();
 
-        //Stopwatch timer = new Stopwatch();
-        //int count = count(a);
-        //StdOut.println("elapsed time = " + timer.elapsedTime());
-        //StdOut.println(count);
+        Stopwatch timer = new Stopwatch();
+        int count = count(a);
+        StdOut.println("elapsed time = " + timer.elapsedTime());
+        StdOut.println(count);
     }
 }
