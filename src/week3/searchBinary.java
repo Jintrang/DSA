@@ -3,6 +3,7 @@ package week3;
 import edu.princeton.cs.algs4.StdIn;
 
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class searchBinary {
     public static int binarySearch(int[] a, int number) {
@@ -20,9 +21,22 @@ public class searchBinary {
         }
     return -1;
     }
+    public static int gcd(int a, int b) throws AssertionError {
+            if (a < 0 || b < 0) {
+                return gcd(Math.abs(a), Math.abs(b));
+            }
+            if (b > a) {
+                return gcd(b, a);
+            } else if (b == 0) {
+                return a;
+            } else {
+                return gcd(b, a % b);
+            }
+    }
 
-    public static void main(String[] args) {
-        int [] a = new int[50];
+    public static void main(String[] args) throws AssertionError {
+
+        /*int [] a = new int[50];
         for (int i = 0; i < 50; i++){
             int number = (int) Math.random();
             number = number % 100 +1;
@@ -30,7 +44,20 @@ public class searchBinary {
         }
         int abc = StdIn.readInt();
         Arrays.sort(a);
-        System.out.println(binarySearch(a, abc));
-    }
+        System.out.println(binarySearch(a, abc));*/
 
+            System.out.println("Enter your name:");
+            Scanner scan = new Scanner(System.in);
+            String name="";
+            String s="";
+            name+=scan.nextLine();
+            s+=scan.nextLine();
+            scan.close();
+
+            System.out.println("Your name is :"+name);
+
+            System.out.println("nhap so");
+            Scanner scans = new Scanner(System.in);
+            int aaa = scans.nextInt();
+    }
 }
