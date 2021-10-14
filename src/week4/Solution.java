@@ -1,5 +1,7 @@
 package week4;
+
 import java.io.IOException;
+import java.util.List;
 
 public class Solution {
     static class SinglyLinkedListNode {
@@ -31,20 +33,24 @@ public class Solution {
             tail = node;
         }
     }
+
     static class result {
         /**
          * print all node of list.
+         *
          * @param head
          */
-        static void printLinkedList (SinglyLinkedListNode head) throws IOException {
-            while (head != null) {
+        static void printLinkedList(SinglyLinkedListNode head) {
+            SinglyLinkedListNode node = head;
+            while (node != null) {
                 System.out.println(head.data);
-                head = head.next;
+                node = node.next;
             }
         }
 
         /**
          * them node khi khong có tail
+         *
          * @param head
          * @param data
          * @return a the head Node of SinglyLinkedListNode
@@ -65,6 +71,7 @@ public class Solution {
 
         /**
          * them mot node vao dau danh sach
+         *
          * @param llist
          * @param data
          * @return
@@ -80,10 +87,11 @@ public class Solution {
 
         /**
          * them node vao vi tri position.
+         *
          * @param llist
          * @param data
          * @param position
-         * @return the head node of new list
+         * @return node dau
          */
         public static SinglyLinkedListNode insertNodeAtPosition(SinglyLinkedListNode llist, int data, int position) {
             // Write your code here
@@ -96,25 +104,27 @@ public class Solution {
                 node.next = llist;
                 llist = node;
             } else {
-                for(int i = 0; i < position - 1; i++) {
+                for (int i = 0; i < position - 1; i++) {
                     nodeRun = nodeRun.next;
                 }
                 node.next = nodeRun.next;
                 nodeRun.next = node;
             }
             return llist;
+
         }
 
         /**
          * xoa mot node o vi tri position.
+         *
          * @param llist
          * @param position
-         * @return headNode of the list
+         * @return node dau
          */
         public static SinglyLinkedListNode deleteNode(SinglyLinkedListNode llist, int position) {
             // Write your code here
             SinglyLinkedListNode nodeRun = llist;
-            if(position == 0) {
+            if (position == 0) {
                 return llist.next;
             }
             for (int i = 0; i < position - 1; i++) {
@@ -127,11 +137,12 @@ public class Solution {
 
         /**
          * in nguoc mot linked list
+         *
          * @param llist
          */
         public static void reversePrint(SinglyLinkedListNode llist) {
             // Write your code here
-            if(llist == null) {
+            if (llist == null) {
                 return;
             } else {
                 reversePrint(llist.next);
@@ -141,6 +152,7 @@ public class Solution {
 
         /**
          * dao nguoc danh sach lien ket
+         *
          * @param llist
          * @return reversed linked list
          */
@@ -159,6 +171,7 @@ public class Solution {
 
         /**
          * so sanh 2  linked list.
+         *
          * @param head1
          * @param head2
          * @return boolean
@@ -175,6 +188,7 @@ public class Solution {
 
         /**
          * nối 2 linked list
+         *
          * @param head1
          * @param head2
          * @return a merged linked list
@@ -195,6 +209,7 @@ public class Solution {
 
         /**
          * tra ve gia tri của node cách tail 1 gia trị
+         *
          * @param llist
          * @param positionFromTail
          * @return the value of node
@@ -214,4 +229,26 @@ public class Solution {
         }
     }
 
+    public static void minimumBribes(List<Integer> q) {
+        // Write your code here
+        int n = q.size();
+        int sum = 0;
+        for (int i = n - 1; i > 0; i--) {
+            if (q.get(i) != i + 1) {
+                if (i >= 1 && q.get(i - 1) == i + 1) {
+                    sum++;
+                    q.add(i - 1, q.get(i));
+                    q.remove(i + 1);
+                } else if (i >= 2 && q.get(i - 2) == i + 1) {
+                    sum += 2;
+                    q.add(q.get(i) - 2, q.get(i));
+                    q.remove(i + 1);
+                } else {
+                    System.out.println("Too chaotic");
+                    return;
+                }
+            }
+        }
+        System.out.println(sum);
+    }
 }

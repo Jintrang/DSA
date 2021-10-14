@@ -5,6 +5,8 @@ import edu.princeton.cs.algs4.StdOut;
 
 import java.util.Arrays;
 
+import static java.util.Arrays.sort;
+
 public class NNThreeSum {
     private static int count(int[] a) {
         int size = a.length;
