@@ -10,15 +10,17 @@ public class BalancedBrackets {
      * The function accepts STRING s as parameter.
      */
 
-    static boolean isOpen(char a) {
+    static boolean isIn(char a) {
         if (a == '(' || a == '{' || a == '[') return true;
         return false;
     }
+
     static boolean isBalance(char b, char f) {
-        if (b == '(' && f ==')' || b == '{' && f =='}' || b == '[' && f ==']')
+        if (b == '(' && f == ')' || b == '{' && f == '}' || b == '[' && f == ']')
             return true;
         return false;
     }
+
     public static String isBalanced(String s) {
         // Write your code here
         int n = s.length();
@@ -26,7 +28,7 @@ public class BalancedBrackets {
         int count = 0;
         for (int i = 0; i < n; i++) {
             char res = s.charAt(i);
-            if(isOpen(res)) {
+            if (isIn(res)) {
                 abc.add(res);
                 count++;
             } else {
@@ -39,7 +41,7 @@ public class BalancedBrackets {
                 }
             }
         }
-        if(count > 0) return "NO";
+        if (count > 0) return "NO";
         return "YES";
     }
 

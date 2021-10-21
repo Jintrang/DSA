@@ -28,13 +28,13 @@ public class SerlectionSort {
     public static void main(String[] args) {
         In in = new In(args[0]);
         int[] a = in.readAllInts();
-        sort(a);
         long start = System.currentTimeMillis();
+        sort(a);
         int n = a.length;
         long end = System.currentTimeMillis();
         for (int i = 0; i < n; i++) {
             System.out.println(a[i] + " ");
         }
-        System.out.println(end + ", " + start);
+        System.out.println(end - start);
     }
 }

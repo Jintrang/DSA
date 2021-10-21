@@ -1,14 +1,5 @@
 package week5;
-import edu.princeton.cs.algs4.In;
-import edu.princeton.cs.algs4.StdIn;
-import edu.princeton.cs.algs4.StdOut;
-import java.util.NoSuchElementException;
-import java.io.*;
 import java.util.*;
-import java.text.*;
-import java.math.*;
-import java.util.regex.*;
-
 
 public class QueueUsingTwoStacks {
 

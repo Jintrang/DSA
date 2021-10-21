@@ -1,11 +1,5 @@
 package week5;
-import java.io.*;
-import java.math.*;
-import java.security.*;
-import java.text.*;
 import java.util.*;
-import java.util.concurrent.*;
-import java.util.regex.*;
 
     /*
      * Complete the 'equalStacks' function below.
@@ -16,9 +10,9 @@ import java.util.regex.*;
      *  2. INTEGER_ARRAY h2
      *  3. INTEGER_ARRAY h3
      */
-public class equalStacks {
-        public static int equalStack(List<Integer> h1, List<Integer> h2, List<Integer> h3) {
-            // Write your code here
+public class EqualStacks {
+        public static int equalStacks(List<Integer> h1, List<Integer> h2, List<Integer> h3) {
+// Write your code here
             int height = 0;
             int s1 = h1.size() - 1, s2 = h2.size() - 1, s3 = h3.size() - 1;
             int ss1 = 0, ss2 = 0, ss3 = 0;
@@ -48,5 +42,5 @@ public class equalStacks {
                 }
             }
             return height;
-        }
+    }
 }
