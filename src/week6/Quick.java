@@ -2,6 +2,8 @@ package week6;
 
 import edu.princeton.cs.algs4.*;
 
+import java.util.Random;
+
 /**
  *  The {@code Quick} class provides static methods for sorting an
  *  array and selecting the ith smallest element in an array using quicksort.
@@ -145,7 +147,16 @@ public class Quick {
      */
     public static void main(String[] args) {
         In in = new In(args[0]);
-        int[] a = in.readAllInts();
+        //int[] a = in.readAllInts();
+        int [] a = new int[100000];
+        int jj=100;
+        for(int i =0; i < 1000; i++) {
+            Random rand = new Random();
+            int ranNum = rand.nextInt(1000)+1;
+            a[i] = rand.nextInt(1000000)+1;
+            jj--;
+
+        }
         long start = System.currentTimeMillis();
         Quick.sort(a);
         long end = System.currentTimeMillis();
@@ -159,8 +170,7 @@ public class Quick {
         // display results again using select
         StdOut.println();
         for (int i = 0; i < a.length; i++) {
-            int ith = Quick.select(a, i);
-            StdOut.println(ith);
+            StdOut.println(a[i]);
         }
         StdOut.println(end-start);
     }

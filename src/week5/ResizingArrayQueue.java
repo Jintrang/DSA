@@ -103,7 +103,7 @@ public class ResizingArrayQueue<Item> implements Iterable<Item> {
     }
 
     // an iterator, doesn't implement remove() since it's optional
-    private class ArrayIterator implements Iterator<Item> {
+    public class ArrayIterator implements Iterator<Item> {
         private int i = 0;
         public boolean hasNext()  { return i < n;                               }
         public void remove()      { throw new UnsupportedOperationException();  }

@@ -14,9 +14,9 @@ public class SerlectionSort {
 
     public static void sort(int[] arr) {
         int n = arr.length;
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i < n - 2; i++) {
             int min = i;
-            for (int j = i + 1; j < n; j++) {
+            for (int j = i + 1; j < n - 1; j++) {
                 if (less(arr[j], arr[min])) {
                     min = j;
                 }
