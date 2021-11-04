@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class quicksort1 {
-    public static List<Integer> quickSort(List<Integer> arr) {
+    public static List<Integer> partition1(List<Integer> arr) {
         // Write your code here
         List<Integer> res = new ArrayList<>();
         int n = arr.size();

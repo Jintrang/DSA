@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class  quicksort3{
 
-    static void quickSort(int[] arr){
+    static void quickSorty(int[] arr){
         quickSort(arr, 0, arr.length-1);
     }
 
@@ -27,7 +27,7 @@ public class  quicksort3{
         }
         swap(ar,i+1,high);
         printArray(ar);
-        return i+1;
+        return i;
     }
 
     static void printArray(int[] ar){
@@ -50,7 +50,6 @@ public class  quicksort3{
         for(int i=0; i<N; i++){
             ar[i] = scanner.nextInt();
         }
-        quickSort(ar);
-
+        quickSorty(ar);
     }
 }

@@ -65,10 +65,10 @@ public abstract class PriorityQueue{
         for(int i = minI; i< last; i++) {
             q[i] = q[i+1];
         }
-        q[last] = Integer.parseInt(null);// to avoid loitering
+        q[last] = Integer.parseInt(null);
         last--;
         n--;
-        if (first == q.length) first = 0;           // wrap-around
+        if (first == q.length) first = 0;
         // shrink size of array if necessary
         if (n > 0 && n == q.length/4) resize(q.length/2);
         return item;
