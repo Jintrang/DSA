@@ -2,14 +2,12 @@ package week8;
 
 import edu.princeton.cs.algs4.StdIn;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 public class BangTraCuu {
     public static void main(String[] args) {
-        String S = StdIn.readLine();
+        Scanner scan = new Scanner(System.in);
+        String S = scan.nextLine();
         String [] SS = S.split(" ");
         boolean [] check = new boolean[SS.length];
         Arrays.fill(check, false);
@@ -24,9 +22,13 @@ public class BangTraCuu {
                         n++;
                     }
                 }
-                arr.add(String. valueOf(check[i]) + " " + String. valueOf(n)) ;
+                arr.add(String. valueOf(SS[i]) + " " + String. valueOf(n)) ;
             }
         }
         Collections.sort(arr);
+        for(int i = 0; i< arr.size(); i++) {
+            String [] arrr= arr.get(i).split(" ");
+            System.out.println(arrr[0] + " "+ arrr[1]);
+        }
     }
 }

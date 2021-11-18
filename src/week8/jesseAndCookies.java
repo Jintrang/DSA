@@ -1,5 +1,8 @@
 package week8;
 
+import edu.princeton.cs.algs4.StdIn;
+
+import java.util.ArrayList;
 import java.util.List;
 import java.util.PriorityQueue;
 
@@ -30,4 +33,16 @@ public class jesseAndCookies {
 
         }
     }
+
+    public static void main(String[] args) {
+        int n = StdIn.readInt();
+        List<Integer> arr = new ArrayList<>();
+        int k = StdIn.readInt();
+        for(int i = 0; i< n; i++ ) {
+            int abc = StdIn.readInt();
+            arr.add(abc);
+        }
+        System.out.println(cookies(k, arr));
+    }
+
 }
