@@ -1,5 +1,6 @@
 package week5;
 
+import java.util.Scanner;
 import java.util.Stack;
 
 public class BalancedBrackets {
@@ -43,6 +44,12 @@ public class BalancedBrackets {
         }
         if (count > 0) return "NO";
         return "YES";
+    }
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        String s = scan.nextLine();
+        System.out.println(isBalanced(s));
     }
 
 }

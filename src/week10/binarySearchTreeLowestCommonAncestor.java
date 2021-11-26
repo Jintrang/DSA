@@ -14,7 +14,7 @@ import java.io.*;
         }
     }*/
 
-public class binarySearchTreeLowestCommonAncestor(){
+class binarySearchTreeLowestCommonAncestor(){
 
         /*
         class Node
